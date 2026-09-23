@@ -1,12 +1,19 @@
 # Huaihan Shan’s personal website
 
-A responsive, one-page academic website for GitHub Pages. It uses plain HTML and CSS, with no packages to install or build step.
+A responsive academic website with separate About, Research, CV, and Contact pages for GitHub Pages. It uses plain HTML and CSS, with no packages to install or build step.
 
 Expected public address after GitHub Pages is enabled: **https://sparkle0418.github.io/**.
 
 ## Current content
 
-The site includes About, Research, CV, and Contact sections. The biography identifies Huaihan Shan as a PhD student at Chicago Booth with interests in digital economics, industrial organization, and causal inference. The contact section links to `huaihan@uchicago.edu` and the GitHub profile. Research papers and the CV are pending; add them when ready. There are no invented papers or credentials, and no broken CV download link.
+The homepage contains the About introduction. The navigation opens separate Research, CV, and Contact pages and highlights the current page. The biography identifies Huaihan Shan as a PhD student at Chicago Booth with interests in digital economics, industrial organization, and causal inference. The Contact page links to `huaihan@uchicago.edu` and the GitHub profile. Research papers and the CV are pending; add them when ready. There are no invented papers or credentials, and no broken CV download link.
+
+| Page | File | Public path |
+| --- | --- | --- |
+| About | `index.html` | `/` |
+| Research | `research.html` | `/research.html` |
+| CV | `cv.html` | `/cv.html` |
+| Contact | `contact.html` | `/contact.html` |
 
 ## Preview locally
 
@@ -21,10 +28,12 @@ Then visit http://127.0.0.1:8000. Stop the server with Ctrl+C.
 ## Update your content
 
 - **Biography:** edit the two paragraphs beneath your name in `index.html`.
-- **Research:** edit the interests in the `research` section and replace the availability notice with your papers when ready. A sample paper entry is below.
-- **CV:** create a `files` folder, place your PDF at `files/cv.pdf`, and replace the availability text using the link example in the HTML comment.
-- **Email:** update the email link in the `contact` section and the `email` field in the structured data near the top of `index.html`.
+- **Research:** edit the interests in `research.html` and replace the availability notice with your papers when ready. A sample paper entry is below.
+- **CV:** create a `files` folder, place your PDF at `files/cv.pdf`, and replace the availability text in `cv.html` using the link example in the HTML comment.
+- **Email:** update the email link in `contact.html` and the `email` field in the structured data near the top of `index.html`.
 - **Appearance:** edit the color variables at the top of `styles.css`.
+
+Each HTML file has its own title and description. All four pages share `styles.css`; if you rename a navigation item, update its label in all four HTML files.
 
 Example research entry (replace every example value before adding it):
 
@@ -55,6 +64,6 @@ Official instructions: [Configure a publishing source](https://docs.github.com/e
 
 ## Search visibility
 
-The page title, visible heading, description, and structured data identify **Huaihan Shan**, independently of the GitHub username. `robots.txt` and `sitemap.xml` allow crawlers to discover the homepage. Search indexing and rankings are not guaranteed or immediate; this repository does not submit the site to a search engine automatically.
+The page titles, visible headings, descriptions, and homepage structured data identify **Huaihan Shan**, independently of the GitHub username. `robots.txt` and `sitemap.xml` allow crawlers to discover all four pages. Search indexing and rankings are not guaranteed or immediate; this repository does not submit the site to a search engine automatically.
 
-If you later use a custom domain, update the canonical URL, Open Graph URL, structured-data URL, `robots.txt`, and `sitemap.xml` together.
+If you later use a custom domain, update the canonical and Open Graph URLs in every HTML file, the homepage structured-data URL, `robots.txt`, and `sitemap.xml` together.
